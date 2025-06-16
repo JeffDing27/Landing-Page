@@ -129,6 +129,48 @@
 			}
 		});
 
+		// Name and description.
+		document.addEventListener("DOMContentLoaded", function(){
+           const dynamicText = document.getElementById("dynamic-text");
+		   const phrases = ["Junior Web Developer", "Software Engineer", "AI Enthusiast"];
+		   let phraseIndex =0;
+		   let letterIndex =0;
+		   let currentText = "";
+		   let isDeleting = false;
+		   const typingSpeed =100;
+		   const deletingSpeed = 60;
+		   const pauseTime =1000; //Time before deleting
+
+		   function type(){
+
+			const currentPhrase =phrases[phraseIndex];
+
+			if (isDeleting){
+               currentText = phrases[phraseIndex].substring(0, letterIndex -1);
+			   letterIndex--;
+			} else{
+				currentText = phrases[phraseIndex].substring(0, letterIndex +1);
+				letterIndex++;
+			}
+			dynamicText.textContent = currentText;
+
+			let delay = isDeleting ? deletingSpeed : typingSpeed;
+
+			if (!isDeleting && letterIndex === currentPhrase.length){
+				
+					isDeleting = true;
+					delay= pauseTime;
+				
+			} else if (isDeleting && letterIndex === 0){
+				isDeleting = false;
+				phraseIndex = (phraseIndex +1) % phrases.length; //Cycle through phrases
+				delay = typingSpeed;
+			}
+			setTimeout(type, delay);
+		   }
+		   type(); // start the typing effect
+		})
+
 	// Spotlights.
 		$('.spotlights > section')
 			.scrollex({

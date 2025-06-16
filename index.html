@@ -11,33 +11,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body class="is-preload">
 
-		<!-- Sidebar -->
+		<!-- Sidebar-->
 			<section id="sidebar">
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who I am</a></li>
-							<li><a href="#two">What I do</a></li>
-							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#intro" class="active"><i class="fa-solid fa-house"></i><span class="text">Home</span></a></li>
+							<li><a href="#one"><i class="fa-solid fa-user"></i><span class="text">About</span></a></li>
+							<li><a href="#two"><i class="far fa-file-alt"></i><span class="text">Resume</span></a></li>
+							<li><a href="#three"><i class="fa-solid fa-briefcase"></i><span class="text">Projects</span></a></li>
+							<li><a href="#four"><i class="fa-solid fa-lightbulb"></i><span class="text">Organizations</span></a></li>
+							<li><a href="#five"><i class="fa-solid fa-envelope"></i><span class="text">Email me</span></a></li>
 						</ul>
 					</nav>
 				</div>
 			</section>
-
+				
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+			
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						
 						<div class="inner">
 							<h1>Ru-Hsuan Ding</h1>
-							<p> I am a Developer, Software Engineer and AI Enthusiast. 
+							<p> I am a/an <span id="dynamic-text">Web Developer</span>.</p>
 							<ul class="actions">
-								<li><a href="https://drive.google.com/file/d/1mFKLThXrvbecHjK1UNHy8xbvQhSPNG_N/view?usp=sharing" class="button scrolly">Resume</a></li>
+								<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="button scrolly" target="_blank"><i class="far fa-file-alt"></i></a></li>
+								<li><a href="mailto:ruhsuanding@gmail.com" class="button scrolly"  target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+								<li><a href="https://github.com/JeffDing27" class="button scrolly"  target="_blank"><i class="icon brands fa-github"></i></a></li>
+								<li><a href="https://www.linkedin.com/in/ruhsuanding/" class="button scrolly"  target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</section>
@@ -45,11 +53,50 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							
 							<div class="content">
 								<div class="inner">
 									<h2>About</h2>
-									<p>Welcome! I’m Ru-Hsuan Ding, an international student from Taiwan majoring in Web Development and holding a certificate in Computer Science.</p>
+									<p>Welcome! I’m Ru-Hsuan Ding, an international student from Taiwan majoring in Web Development. I hold an Associate degree in Web Development and a certificate in Computer Science.</p>
+
+									<div class="about-container">
+									<img src="/assets/css/images/1678510941060.jpg" alt="Profile" class="image" />
+									
+									<div class="about-text">
+										
+											
+										
+										<p>Currently, I am a web developer at Origin Brand Merch. In 2023, I made a career shift from the fitness industry to pursue my passion for technology. While I still have a deep love for sports and the human body, I’ve always been fascinated by computer science and coding—especially the creative aspect of building and problem-solving. My goal is to use technology to make a positive impact, whether by helping communities, supporting individuals, or contributing to global solutions. I’m excited to continue learning and growing as I work to bridge my passions for both human connection and technological innovation.</p>
+										<ul>
+											<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="resume-about" target="_blank"><i class="far fa-file-alt"></i>Resume</a></li>
+										</ul>
+										<div class="about-row">
+											<div class="about-column1">
+											<ul>
+											<li><strong>Website</strong>: www.ruhsuanding.com</li>   
+										     
+											<li><strong>Major</strong>: Web Development</li>
+											<li><strong>Current Position 1</strong>: Web Developer@ Origin Brand Merch</li>
+											<li><strong>Past Position 1</strong>: Software Engineering Fellow@ Headstarter AI</li>
+											</ul>
+											</div>
+											<div class="about-column2">
+											<ul>
+											<li><strong>Degree</strong>: Associate</li>
+											<li><strong>Certificate</strong>: Computer Science</li>
+											<li><strong>Current Position 2</strong>: Father</li>
+											<li><strong>Past Position 2</strong>: Web Developer Intern@ The Church of Jesus Christ of Latter-Day Saints</li>
+
+
+											</ul>
+											</div>
+											
+										</div>
+										<p>When I'm not coding or studying, you'll find me hitting the gym, playing basketball, or cooking. Health is at the core of who I am, and I believe taking care of my body is just as important as sharpening my mind. Staying active and fueling myself with nutritious food keeps me energized and focused, helping me excel in all areas of life.</p>
+									</div>
+
+									
+									</div>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -57,11 +104,32 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							
 							<div class="content">
 								<div class="inner">
 									<h2>Skills</h2>
-									<p>React, JavaScript, Java, SQL, HTML and CSS</p>
+									<div class="skill-set">
+										<div class="skill">
+											<i class="fa-brands fa-react" style="color: #74C0FC; font-size: 4rem;"></i>
+											<span>React</span>
+										  </div>
+										  <div class="skill">
+											<i class="fa-brands fa-js" style="font-size: 4rem; color: #361f51"></i>
+											<span>JavaScript</span>
+										  </div>
+										  <div class="skill">
+											<i class="fa-brands fa-css3-alt" style="color: #FFD43B; font-size: 4rem;"></i>
+											<span>CSS</span>
+										  </div>
+										  <div class="skill">
+											<i class="fa-brands fa-html5" style="color: #B197FC; font-size: 4rem;"></i>
+											<span>HTML</span>
+										  </div>
+										  <div class="skill">
+											<i class="fa-solid fa-database" style="font-size: 4rem;"></i>
+											<span>SQL</span>
+										  </div>
+									  </div>
 									<ul class="actions">
 										<!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
 									</ul>
@@ -69,16 +137,70 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							
 							<div class="content">
 								<div class="inner">
 									<h2>Projects</h2>
 									<p>Here are some of the Projects I have done in my tech career. I am always eager to learn and build more! I feel these best describe my strengths!</p>
-									<ul class="actions">
-										<li><a href="https://github.com/JeffDing27/magazine-app" class="button">Online Magazin</a></li>
-										<li><a href="https://github.com/artcom3/travel-blog" class="button">Travel Blog</a></li>
-										<li><a href="https://github.com/JNope01/WD_Project3" class="button">Zombie Training Camp</a></li>
-									</ul>
+									<div class="projects-grid">
+										<div class="project-card">
+										  <img src="project1-thumbnail.jpg" alt="Project 1">
+										  <div class="project-info">
+											<h3>Project Title</h3>
+											<p>Short description of the project goes here.</p>
+										  </div>
+										</div>
+									
+										<div class="project-card">
+										  <img src="project2-thumbnail.jpg" alt="Project 2">
+										  <div class="project-info">
+											<h3>Another Project</h3>
+											<p>Another short description.</p>
+										  </div>
+										</div>
+
+										<div class="project-card">
+											<img src="project3-thumbnail.jpg" alt="Project 3">
+											<div class="project-info">
+											  <h3>Another Project</h3>
+											  <p>Another short description.</p>
+											</div>
+										  </div>
+
+										  <div class="project-card">
+											<img src="project4-thumbnail.jpg" alt="Project 4">
+											<div class="project-info">
+											  <h3>Another Project</h3>
+											  <p>Another short description.</p>
+											</div>
+										  </div>
+
+										  <div class="project-card">
+											<img src="project4-thumbnail.jpg" alt="Project 5">
+											<div class="project-info">
+											  <h3>Another Project</h3>
+											  <p>Another short description.</p>
+											</div>
+										  </div>
+
+										  <div class="project-card">
+											<img src="project5-thumbnail.jpg" alt="Project 6">
+											<div class="project-info">
+											  <h3>Another Project</h3>
+											  <p>Another short description.</p>
+											</div>
+										  </div>
+
+										  <div class="project-card">
+											<img src="project6-thumbnail.jpg" alt="Project 7">
+											<div class="project-info">
+											  <h3>Another Project</h3>
+											  <p>Another short description.</p>
+											</div>
+										  </div>
+									
+										<!-- Add more cards as needed -->
+									  </div>
 								</div>
 							</div>
 						</section>
@@ -87,7 +209,7 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>Experience/Organizations</h2>
+							<h2>Work Experience/Organizations</h2>
 							<p>Here are some work experience and organizations, both on and off campus, I am involved in!</p>
 							<div class="features">
 								<section>
@@ -133,37 +255,38 @@
 							
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="https://formspree.io/f/xeoerkyn">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<input type="text" name="name" id="name" required />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="text" name="email" id="email" required />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea name="message" id="message" rows="5" required></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><button type="submit" class="button submit">Send Message</button></li>
 										</ul>
 									</form>
+									
 								</section>
 								<section>
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
-											<span>Salt Lake City, Utah<br />
+											<span>Vineyard, Utah<br />
 											
 											USA</span>
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">ruhsuanding@gmail.com</a>
+											<a href="mailto:ruhsuanding@gmail.com">ruhsuanding@gmail.com</a>
 										</li>
 										<li>
 											<h3>Phone</h3>
@@ -173,10 +296,10 @@
 											<h3>Social</h3>
 											<ul class="icons">
 												
-												<li><a href="https://drive.google.com/file/d/1mFKLThXrvbecHjK1UNHy8xbvQhSPNG_N/view?usp=sharing" class="far fa-file-alt"><span class="label"></span></a></li>
-												<li><a href="https://github.com/JeffDing27" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" target="_blank" class="far fa-file-alt" target="_blank"><span class="label"></span></a></li>
+												<li><a href="https://github.com/JeffDing27" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
 												
-												<li><a href="https://www.linkedin.com/in/ru-hsuan-ding/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://www.linkedin.com/in/ruhsuanding/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>
 									</ul>
