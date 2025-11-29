@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -23,9 +24,9 @@
 						<ul>
 							<li><a href="#intro" class="active"><i class="fa-solid fa-house"></i><span class="text">Home</span></a></li>
 							<li><a href="#one"><i class="fa-solid fa-user"></i><span class="text">About</span></a></li>
-							<li><a href="#two"><i class="far fa-file-alt"></i><span class="text">Resume</span></a></li>
+							<li><a href="#skills"><i class="fa-solid fa-tools"></i><span class="text">Skills</span></a></li>
 							<li><a href="#three"><i class="fa-solid fa-briefcase"></i><span class="text">Projects</span></a></li>
-							<li><a href="#four"><i class="fa-solid fa-lightbulb"></i><span class="text">Organizations</span></a></li>
+							<li><a href="#two"><i class="fa-solid fa-user-tie"></i><span class="text">Experience</span></a></li>
 							<li><a href="#five"><i class="fa-solid fa-envelope"></i><span class="text">Email me</span></a></li>
 						</ul>
 					</nav>
@@ -68,7 +69,7 @@
 										
 										<p>Currently, I am a web developer at Origin Brand Merch. In 2023, I made a career shift from the fitness industry to pursue my passion for technology. While I still have a deep love for sports and the human body, I’ve always been fascinated by computer science and coding—especially the creative aspect of building and problem-solving. My goal is to use technology to make a positive impact, whether by helping communities, supporting individuals, or contributing to global solutions. I’m excited to continue learning and growing as I work to bridge my passions for both human connection and technological innovation.</p>
 										<ul>
-											<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="resume-about" target="_blank"><i class="far fa-file-alt"></i>Resume</a></li>
+											<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="resume-btn" target="_blank">Download Resume</a></li>
 										</ul>
 										<div class="about-row">
 											<div class="about-column1">
@@ -92,18 +93,16 @@
 											</div>
 											
 										</div>
-										<p>When I'm not coding or studying, you'll find me hitting the gym, playing basketball, or cooking. Health is at the core of who I am, and I believe taking care of my body is just as important as sharpening my mind. Staying active and fueling myself with nutritious food keeps me energized and focused, helping me excel in all areas of life.</p>
+										<p class="about-interest-mg">When I'm not coding or studying, you'll find me hitting the gym, playing basketball, or cooking. Health is at the core of who I am, and I believe taking care of my body is just as important as sharpening my mind. Staying active and fueling myself with nutritious food keeps me energized and focused, helping me excel in all areas of life.</p>
 									</div>
 
 									
 									</div>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+									
 								</div>
 							</div>
 						</section>
-						<section class="skills-bg">
+						<section id="skills" class="skills-bg">
 							
 							<div class="content">
 								<div class="inner">
@@ -136,7 +135,7 @@
 								</div>
 							</div>
 						</section>
-						<section>
+						<section id="three">
 							
 							<div class="content">
 								<div class="inner">
@@ -192,23 +191,7 @@ AI-powered flashcard app using Next.js, React, Firebase, and Google Generative A
 											  <h3>Another Project</h3>
 											  <p>Another short description.</p>
 											</div>
-										  </div>
-
-										  <div class="project-card">
-											<img src="project5-thumbnail.jpg" alt="Project 6">
-											<div class="project-info">
-											  <h3>Another Project</h3>
-											  <p>Another short description.</p>
-											</div>
-										  </div>
-
-										  <div class="project-card">
-											<img src="project6-thumbnail.jpg" alt="Project 7">
-											<div class="project-info">
-											  <h3>Another Project</h3>
-											  <p>Another short description.</p>
-											</div>
-										  </div>
+										  </div>					  
 									
 										<!-- Add more cards as needed -->
 									  </div>
@@ -224,44 +207,59 @@ AI-powered flashcard app using Next.js, React, Firebase, and Google Generative A
 							<p>Here are some work experience and organizations, both on and off campus, I am involved in!</p>
 							<div class="features">
 								<section>
-									<span class="icon solid major fa-code"></span>
+									<span class="icon solid major">
+										<img src="assets/css/images/OriginFavicon.png" alt="My Photo" />
+									</span>
+									<h3>Origin Brand Merch</h3>
+									<p>Develop and maintain websites and pop-up stores for customers using HTML, CSS, and JavaScript, having created nearly 30 stores to date. Handle IT tasks including domain setup, Stripe account creation, onboarding new hires, and creating SOPs. Manage Shopify and deconNet stores, and edit images using Adobe tools to support web and marketing projects.</p>
+								</section>
+								<section>
+									<span class="icon solid major">
+										<img src="assets/css/images/HeadFavicon.png" alt="My Photo" />
+									</span>
 									<h3>HeadStarter AI</h3>
-									<p>Software Engineering Fellow for this amazing AI company, that is currently revolutionalizing the world of computer science and computer science students, by giving us a chance to build!</p>
+									<p>Software Engineering Fellow for this amazing AI company. Built and deployed 5+ AI applications and APIs using Next.js, Node.js, React, Tailwind, Firebase, and OpenAI, serving over 1,000 users with 98% accuracy. Collaborated with engineering fellows on full project lifecycle and received mentorship from Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git, and microservice best practices.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-lock"></span>
+									<span class="icon solid major">
+										<img src="assets/css/images/Church_of_Jesus_Christ_LDS_Logo.jpg" alt="My Photo" />
+									</span>
 									<h3>Web Developer Intern @ The Church of Jesus Christ of Latter-day Saints</h3>
-									<p>I was an intern for 4 months. We primarily focused on React and JavaScript for the church magazine website.</p>
+									<p>Developed and optimized the church magazine website using React and JavaScript, implemented reusable functions and hooks, and resolved critical bugs for global launch. Conducted QA testing and created test cases to ensure smooth functionality, while applying Kanban methodology and planning layouts with Lucidchart.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-cog"></span>
+									<span class="icon solid major">
+										<img src="assets/css/images/CodecademyFavicon.png" alt="My Photo" />
+									</span>
 									<h3>Codecademy</h3>
-									<p>It is an online interactive platform that offers free coding classes in 12 different programming languages including Python, Java, Go, JavaScript, Ruby, SQL, C++, C#, and Swift, as well as markup languages HTML and CSS.</p>
+									<p>Actively pursuing coding education through Codecademy, completing courses in JavaScript, React, HTML, CSS, and other web development technologies. Engaged in hands-on projects to build practical skills and strengthen software development knowledge.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-desktop"></span>
+									<span class="icon solid major">
+										<img src="assets/css/images/SHPE.png" alt="My Photo" />
+									</span>
 									<h3>SHPE</h3>
-									<p>Member of this nation's largest association dedicated to fostering Hispanic leadership in the STEM field.</p>
+									<p>Member of the nation’s largest association dedicated to fostering Hispanic leadership in STEM fields.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>IT Student Group</h3>
-									<p>Memeber of this amazing group on campus that help us develop innovative projects, discuss emerging technologies, and network with industry profesiionals.</p>
+									<span class="icon solid major">
+										<img src="assets/css/images/Ensign.png" alt="My Photo" />
+									</span>
+									<h3>Ensign College Tech Group</h3>
+									<p>Active member of a campus group focused on developing innovative projects, exploring emerging technologies, and networking with industry professionals.</p>
 								</section>
 								<section>
 									
 								
 							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
+							
 						</div>
 					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+					<section id="five" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
+							<h2>Get In Touch</h2>
 							<p>I would love to connect! </p>
 							
 							<div class="split style1">
@@ -287,34 +285,7 @@ AI-powered flashcard app using Next.js, React, Firebase, and Google Generative A
 									</form>
 									
 								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>Vineyard, Utah<br />
-											
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:ruhsuanding@gmail.com">ruhsuanding@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>385-335-3603</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												
-												<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" target="_blank" class="far fa-file-alt" target="_blank"><span class="label"></span></a></li>
-												<li><a href="https://github.com/JeffDing27" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-												
-												<li><a href="https://www.linkedin.com/in/ruhsuanding/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
+								
 							</div>
 						</div>
 					</section>
@@ -322,13 +293,35 @@ AI-powered flashcard app using Next.js, React, Firebase, and Google Generative A
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; 2025 Ru-Hsuan Ding. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+			<!-- Footer -->
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+  <div class="inner footer-contact">
+    <div class="footer-item">
+      
+      <span>385-335-3603</span>
+    </div>
+    <div class="footer-item">
+      
+      <span>Salt Lake City, Utah, USA</span>
+    </div>
+    <div class="footer-item">
+      
+      <ul class="icons">
+        <li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" target="_blank" class="far fa-file-alt"><span class="label"></span></a></li>
+        <li><a href="https://github.com/JeffDing27" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        <li><a href="https://www.linkedin.com/in/ruhsuanding/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="menu">
+    <li>&copy; 2025 Ru-Hsuan Ding. All rights reserved.</li>
+    <li>Design: HTML5 UP</li>
+  </ul>
+</footer>
+
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

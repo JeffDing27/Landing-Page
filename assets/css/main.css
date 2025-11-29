@@ -71,6 +71,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	@-ms-viewport {
@@ -173,7 +174,9 @@ input, select, textarea {
 	p {
 		margin: 0 0 2em 0;
 		font-size: 1rem;
-
+		display: flex;
+		justify-content: center;
+		color:black;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -182,6 +185,8 @@ input, select, textarea {
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
 		font-family:"Times New Roman", Times, serif;
+		display:flex;
+		justify-content: center;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2064,8 +2069,8 @@ input, select, textarea {
 				-ms-transform: scale(1);
 				transform: scale(1);
 				position: absolute;
-				left: 3em;
-				top: 3em;
+				left: 0em;
+				top: 2em;
 				opacity: 1;
 			}
 
@@ -2283,6 +2288,7 @@ input, select, textarea {
 			flex-wrap: wrap;
 			width: calc(100% + 3em);
 			margin: -1.5em 0 2em -1.5em;
+			justify-content:center;
 		}
 
 			form > .fields > .field {
@@ -2337,7 +2343,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color: black;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -2564,9 +2570,7 @@ input, select, textarea {
 		.icon.major {
 			width: 2.5em;
 			height: 2.5em;
-			display: block;
-			background: #ffffff;
-			border-radius: 100%;
+			display: block;	
 			color: #312450;
 			text-align: center;
 			line-height: 2.5em;
@@ -2673,7 +2677,6 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
 		padding-left: 1em;
 	}
 
@@ -2719,8 +2722,6 @@ input, select, textarea {
 		display: flex;
 		cursor: default;
 		list-style: none;
-		margin-left: -1em;
-		padding-left: 0;
 		justify-content: center;
     margin-top: 2rem;
 	}
@@ -2880,6 +2881,8 @@ input, select, textarea {
 	ul.menu {
 		list-style: none;
 		padding: 0;
+		justify-self: center;
+		font-size: 1rem;
 	}
 
 		ul.menu > li {
@@ -2947,6 +2950,8 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		justify-content: center;
+    	padding-top: 2rem;
 	}
 
 		.split > * {
@@ -3531,7 +3536,7 @@ input, select, textarea {
 
 			#sidebar + #wrapper {
 				margin-left: 0;
-				padding-top: 3.5em;
+				
 			}
 
 		}
@@ -3643,7 +3648,7 @@ input, select, textarea {
 				-webkit-transition: opacity 0.15s ease, -webkit-transform 0.75s ease;
 				-ms-transition: opacity 0.15s ease, -ms-transform 0.75s ease;
 				transition: opacity 0.15s ease, transform 0.75s ease;
-				margin: 1.5em 0 0 0;
+				margin: 1em 0 1em 0;
 				opacity: 1;
 				padding: 0;
 				position: relative;
@@ -4029,8 +4034,10 @@ input, select, textarea {
 			
 		}
 		.image{
-			width: 350px !important;
-			height: 40vh;
+			width: auto !important;
+    		height: 40vh;
+    		object-fit: contain;
+    		object-position: center;
 
 		}
 		.about-text{
@@ -4070,6 +4077,7 @@ input, select, textarea {
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 			gap: 2rem;
 			margin-top: 5rem;
+			justify-items: center;
 		}
 		.project-card{
 			width: 300px;
