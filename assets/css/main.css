@@ -3568,7 +3568,7 @@ input, select, textarea {
 		}
 
 	#footer > .inner a {
-		border-bottom-color: rgba(255, 255, 255, 0.15);
+		border-bottom-color:black;
 	}
 
 		#footer > .inner a:hover {
@@ -4105,4 +4105,16 @@ input, select, textarea {
 				width:100%;
 			}
 		}
+	.about-text p,
+	.about-text p * {
+  		display: inline !important;
+  		font-weight: inherit;
+	}
+	.about-text p {
+		line-height: 1 !important;
+	}
+	.bold-text {
+    font-weight: 700 !important;
+    display: inline !important;
+	}
 		
