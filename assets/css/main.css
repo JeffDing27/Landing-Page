@@ -3964,10 +3964,23 @@ input, select, textarea {
 		font-size: 1.5em;
 		font-weight: bold;
 	}
-	#dynamic-text{
-		color: #39FF14;
-		font-style: italic;
-	}
+	#dynamic-text {
+  font-style: italic;
+  background: linear-gradient(120deg, #E0E0E0, #BCC0C5, #A8A9AD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.2;
+  }
+
+}
 	#intro {
 		position: relative;
 		background-attachment: fixed;
