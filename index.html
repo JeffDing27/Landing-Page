@@ -105,8 +105,8 @@
 						</section>
 					</section>	
 					
-						<section id="skills" class="wrapper style2 spotlights skills-bg">
-							<section>
+						<section id="skills" class="wrapper style2 spotlights">
+							<section class="skills-bg">
 							<div class="content">
 								<div class="inner">
 									<h2>Skills</h2>
@@ -152,7 +152,7 @@
     											<img src="assets/css/images/Origin.png" alt="Project 1">
 
 												<div class="project-overlay">
-    												<a href="assets/css/images/Origin.png" target="_blank" class="overlay-btn">🔍</a>
+    												<a href="#" onclick="openModal('assets/css/images/Origin.png'); return false;" class="overlay-btn">🔍</a>
     												<a href="https://www.originbrandmerch.com/" target="_blank" class="overlay-btn">🚀</a>
 												</div>
  											</div>
@@ -168,7 +168,7 @@
 										  <img src="assets/css/images/Flashcards.png" alt="Project 2">
 
 										  <div class="project-overlay">
-    											<a href="assets/css/images/Flashcards.png" target="_blank" class="overlay-btn">🔍</a>
+    											<a href="#" onclick="openModal('assets/css/images/Flashcards.png'); return false;" class="overlay-btn">🔍</a>
     											<a href="https://flashcard-rust-theta.vercel.app/generate" target="_blank" class="overlay-btn">🚀</a>
 											</div>
 										  </div>
@@ -186,8 +186,8 @@
 											<div class="image-container">
 										  <img src="assets/css/images/inventory (2).png" alt="Project 3">
 										  <div class="project-overlay">
-    											<a href="assets/css/images/inventory (2).png" target="_blank" class="overlay-btn">🔍</a>
-    											<a href="https://inventory-tracker-git-main-jeff-dings-projects.vercel.app/" target="_blank" class="overlay-btn">🚀</a>
+    											<a href="#" onclick="openModal('assets/css/images/inventoryBig.png'); return false;" class="overlay-btn">🔍</a>
+    											<a href="https://inventory-tracker-sheet.vercel.app/" target="_blank" class="overlay-btn">🚀</a>
 											</div>
 											</div>
 											<div class="project-info">
@@ -204,7 +204,7 @@
 										  <img src="assets/css/images/Expense.png" alt="Project 4">
 
 										  <div class="project-overlay">
-    											<a href="assets/css/images/Expense.png" target="_blank" class="overlay-btn">🔍</a>
+    											<a href="#" onclick="openModal('assets/css/images/expenseBig.png'); return false;" class="overlay-btn">🔍</a>
     											<a href="https://expense-tracker-sheet.vercel.app/" target="_blank" class="overlay-btn">🚀</a>
 											</div>
 											</div>
@@ -223,7 +223,7 @@
 										  <img src="assets/css/images/Magzine.png" alt="Project 5">
 
 										  <div class="project-overlay">
-    											<a href="assets/css/images/Magzine.png" target="_blank" class="overlay-btn">🔍</a>
+    											<a href="#" onclick="openModal('assets/css/images/magazineBig.png'); return false;" class="overlay-btn">🔍</a>
     											
 											</div>
 										  </div>
@@ -374,6 +374,32 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<div id="imgModal" class="modal">
+  				<span class="close-btn">&times;</span>
+  				<img class="modal-content" id="modalImage">
+			</div>
+
+			<script>
+  				const modal = document.getElementById("imgModal");
+  				const modalImg = document.getElementById("modalImage");
+  				const closeBtn = document.querySelector(".close-btn");
+
+  				function openModal(imgSrc) {
+    				modal.style.display = "flex";
+    				modalImg.src = imgSrc;
+  				}
+
+  				closeBtn.onclick = () => {
+   				 modal.style.display = "none";
+  				};
+
+  				modal.onclick = (e) => {
+    				if (e.target === modal) modal.style.display = "none";
+  				};
+			</script>
+
+
 
 	</body>
 </html>
