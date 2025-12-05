@@ -38,6 +38,64 @@ html, body {
   display: block;
   object-fit: cover;
 }
+/* Project */
+.project-card {
+    width: 100%;
+    max-width: 400px; /* or whatever size your layout uses */
+    margin: 0 auto;
+}
+
+/* Only wrap the image */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Hover ONLY affects the image overlay */
+.image-container:hover .project-overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    background: white;
+    color: black;
+    font-size: 1.6rem;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s;
+    pointer-events: auto;
+}
+
+.overlay-btn:hover {
+    transform: scale(1.2);
+}
+
+
 /* Form fields styling */
 .split.style1 form input,
 .split.style1 form textarea {
