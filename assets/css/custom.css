@@ -104,6 +104,34 @@ html, body {
     transform: scale(1.2);
 }
 
+.project-icons {
+  display: flex;          /* makes them horizontal */
+  gap: 10px;              /* spacing between icons */
+  margin: 10px 0;
+  justify-content:center;
+}
+
+.icon-btn {
+  font-size: 1.5rem;      /* adjust icon size */
+  text-decoration: none;  
+  cursor: pointer;
+  
+}
+a{
+  align-content: center !important;
+} 
+.github-link {
+  color: inherit;              /* keep original text color */
+  text-decoration: none;       /* remove underline */
+  display: inline-block;       /* needed for transform */
+  transition: transform 0.2s, color 0.2s; /* smooth movement and color change */
+}
+
+.github-link:hover {
+  transform: scale(1.2);       /* make it 20% bigger on hover */
+  
+}
+
 
 /* Form fields styling */
 .split.style1 form input,
