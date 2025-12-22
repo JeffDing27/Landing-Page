@@ -20,10 +20,10 @@
 
 		<!-- Sidebar-->
 			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro" class="active"><i class="fa-solid fa-house"></i><span class="text">Home</span></a></li>
+				
+					<nav class="desktop-nav">
+						<ul id="desktop-links">
+							<li><a href="#intro"><i class="fa-solid fa-house"></i><span class="text">Home</span></a></li>
 							<li><a href="#one"><i class="fa-solid fa-address-card"></i><span class="text">About</span></a></li>
 							<li><a href="#skills"><i class="fa-solid fa-tools"></i><span class="text">Skills</span></a></li>
 							<li><a href="#three"><i class="fa-solid fa-briefcase"></i><span class="text">Projects</span></a></li>
@@ -31,7 +31,21 @@
 							<li><a href="#five"><i class="fa-solid fa-envelope"></i><span class="text">Email me</span></a></li>
 						</ul>
 					</nav>
-				</div>
+				
+					<button id="menu-toggle" class="menu-toggle">
+    					<i class="fa-solid fa-bars"></i>
+  					</button>
+					
+						<ul id="mobile-links">
+							<li><a href="#intro"><i class="fa-solid fa-house"></i><span class="text">Home</span></a></li>
+							<li><a href="#one"><i class="fa-solid fa-address-card"></i><span class="text">About</span></a></li>
+							<li><a href="#skills"><i class="fa-solid fa-tools"></i><span class="text">Skills</span></a></li>
+							<li><a href="#three"><i class="fa-solid fa-briefcase"></i><span class="text">Projects</span></a></li>
+							<li><a href="#two"><i class="fa-solid fa-user-tie"></i><span class="text">Experience</span></a></li>
+							<li><a href="#five"><i class="fa-solid fa-envelope"></i><span class="text">Email me</span></a></li>
+						</ul>
+					
+				
 			</section>
 				
 		<!-- Wrapper -->
@@ -39,18 +53,30 @@
 			
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						
-						<div class="inner">
-							<h1>Ru-Hsuan Ding (Jeff)</h1>
-							<p> I'm a/an&nbsp;<span id="dynamic-text"> Junior Web Developer</span>.</p>
-							<ul class="actions">
-								<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="banner-button scrolly" target="_blank"><i class="far fa-file-alt"></i></a></li>
-								<li><a href="mailto:ruhsuanding@gmail.com" class="banner-button scrolly"  target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
-								<li><a href="https://github.com/JeffDing27" class="banner-button scrolly"  target="_blank"><i class="icon brands fa-github"></i></a></li>
-								<li><a href="https://www.linkedin.com/in/ruhsuanding/" class="banner-button scrolly"  target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</section>
+						<div class="intro-flex">
+							
+    <div class="intro-text">
+      <h1 >
+  Hi there &nbsp<img src="https://twemoji.maxcdn.com/v/latest/72x72/1f44b.png" alt="waving hand" style="width:1em; height:1em;"> &nbsp I'm
+</h1>
+
+      <p><span id="dynamic-text">Junior Web Developer</span></p>
+      <p class="description-color">
+        Passionate about building full-stack applications and exploring AI solutions.
+      </p>
+      <ul class="actions">
+        <li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="banner-button scrolly" target="_blank"><i class="far fa-file-alt"></i></a></li>
+        <li><a href="mailto:ruhsuanding@gmail.com" class="banner-button scrolly" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://github.com/JeffDing27" class="banner-button scrolly" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/ruhsuanding/" class="banner-button scrolly" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+    <div class="intro-image">
+      <img src="assets/css/images/jeff.jpg" alt="Profile Photo" />
+    </div>
+  </div>
+</section>
+					
 
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
@@ -59,10 +85,10 @@
 							<div class="content">
 								<div class="inner">
 									<h2>About</h2>
-									<p>Welcome! I’m Ru-Hsuan Ding (Jeff), an international student from Taiwan majoring in Web Development. I hold an Associate degree in Web Development and a certificate in Computer Science.</p>
+									
 
 									<div class="about-container">
-										<img src="/assets/css/images/1678510941060.jpg" alt="Profile" class="image" />
+										
 									
 										<div class="about-text">
 										
@@ -71,11 +97,11 @@
 											<p>I currently work as a <span class="bold-text">Web Developer at Origin Brand Merch</span>, where I build and customize digital experiences. In 2023, I transitioned from the fitness industry to pursue my passion for technology. I enjoy solving problems, creating intuitive interfaces, and building tools that make people’s lives easier.</p>
 											<br><p>Before my current role, I gained valuable experience as a <span class="bold-text">Developer Intern at The Church of Jesus Christ of Latter-day Saints</span> and completed the <span class="bold-text">HeadStarter AI Software Engineering Fellowship</span>. These opportunities strengthened my skills in front-end and back-end development and helped shape my path in tech.</p>
 											<br><p>My goal is to keep growing as a <span class="bold-text">full-stack developer</span> and use technology to contribute to meaningful, real-world solutions.</p>
-											<br><p>Outside of coding, I love staying active—lifting, playing basketball, and cooking. A healthy lifestyle helps me stay focused, creative, and motivated.</p>
+											
 
 										
-										
-											<ul>
+											
+											<ul class="resume-list">
 												<br>
 												<li><a href="https://drive.google.com/file/d/1EDWc55uDmqApfT7qB-n20L78kPjrsMQ8/view?usp=sharing" class="resume-btn" target="_blank">Download Resume</a></li>
 											</ul>
@@ -106,39 +132,105 @@
 					</section>	
 					
 						<section id="skills" class="wrapper style2 spotlights">
-							<section class="skills-bg">
-							<div class="content">
-								<div class="inner">
-									<h2>Skills</h2>
-									<div class="skill-set">
-										<div class="skill">
-											<i class="fa-brands fa-react" style="color: #74C0FC; font-size: 4rem;"></i>
-											<span>React</span>
-										  </div>
-										  <div class="skill">
-											<i class="fa-brands fa-js" style="font-size: 4rem; color: #361f51"></i>
-											<span>JavaScript</span>
-										  </div>
-										  <div class="skill">
-											<i class="fa-brands fa-css3-alt" style="color: #FFD43B; font-size: 4rem;"></i>
-											<span>CSS</span>
-										  </div>
-										  <div class="skill">
-											<i class="fa-brands fa-html5" style="color: #B197FC; font-size: 4rem;"></i>
-											<span>HTML</span>
-										  </div>
-										  <div class="skill">
-											<i class="fa-solid fa-database" style="font-size: 4rem;"></i>
-											<span>SQL</span>
-										  </div>
-									  </div>
-									<ul class="actions">
-										<!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
-									</ul>
-								</div>
-							</div>
-							</section>
-						</section>
+  <section class="skills-bg">
+    <div class="content">
+      <div class="inner">
+        <h2>Skills</h2>
+
+        <div class="skill-set">
+          <div class="skill">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+              alt="React"
+            />
+            <span>React</span>
+			
+          </div>
+
+          <div class="skill">
+            <img src="assets/css/images/next.jpg" alt="Next.js" />
+            <span>Next.js</span>
+          </div>
+
+          <div class="skill">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+              alt="JavaScript"
+            />
+            <span>JavaScript</span>
+          </div>
+
+          <div class="skill">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+              alt="HTML"
+            />
+            <span>HTML</span>
+          </div>
+
+          <div class="skill">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+              alt="CSS"
+            />
+            <span>CSS</span>
+          </div>
+
+          <div class="skill">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+              alt="Tailwind CSS"
+            />
+            <span>Tailwind</span>
+          </div>
+
+          <div class="skill">
+            <img src="assets/css/images/firebase.png" alt="Firebase" />
+            <span>Firebase</span>
+          </div>
+
+          <div class="skill">
+           <img src="assets/css/images/sql.png" alt="SQL" />
+            <span>SQL</span>
+          </div>
+
+          <div class="skill">
+            <img src="assets/css/images/clerk.svg" alt="Clerk" />
+            <span>Clerk</span>
+          </div>
+
+          <div class="skill">
+            <img src="assets/css/images/material.png" alt="Material UI" />
+            <span>Material UI</span>
+          </div>
+
+          <div class="skill">
+            <img src="assets/css/images/styled.png" alt="Styled Components" />
+            <span>Styled Components</span>
+          </div>
+
+          <div class="skill">
+            <img src="assets/css/images/Vercel.ico" alt="Vercel" />
+            <span>Vercel</span>
+          </div>
+
+          <div class="skill">
+            <img
+              src="https://logo.svgcdn.com/logos/google-gemini.svg"
+              alt="Google Gemini"
+            />
+            <span>Google AI</span>
+          </div>
+        </div>
+
+        <ul class="actions">
+          <!-- optional buttons -->
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
 						<section id="three" class="wrapper style2 spotlights">
 							<section>
 							<div class="content">
@@ -174,7 +266,7 @@
 											<div class="project-icons">
     											<a href="#" onclick="openModal('assets/css/images/Flashcards.png'); return false;" class="overlay-btn">🔍</a>
     											<a href="https://flashcard-rust-theta.vercel.app/generate" target="_blank" class="overlay-btn">🚀</a>
-												<a href="https://github.com/JeffDing27/flashcard-" target="_blank" style="text-decoration: none; color: inherit;" class="github-link"><i class="fab fa-github"></i> </a>
+												<a href="https://github.com/JeffDing27/flashcard-" target="_blank" style="text-decoration: none; color: inherit;" class="overlay-btn github-link"><i class="fab fa-github"></i> </a>
 											</div>
 											<p>Next.js, React, Firebase, Google Gemini API, Clerk Authentication, Material UI</p>
 											
@@ -194,9 +286,9 @@
 											  <div class="project-icons">
     											<a href="#" onclick="openModal('assets/css/images/inventoryBig.png'); return false;" class="overlay-btn">🔍</a>
     											<a href="https://inventory-tracker-sheet.vercel.app/" target="_blank" class="overlay-btn">🚀</a>
-												<a href="https://github.com/JeffDing27/inventory-tracker.git" target="_blank" style="text-decoration: none; color: inherit;" class="github-link"><i class="fab fa-github"></i></a>
+												<a href="https://github.com/JeffDing27/inventory-tracker.git" target="_blank" style="text-decoration: none; color: inherit;" class="overlay-btn github-link"><i class="fab fa-github"></i></a>
 											</div>
-											  <p>Next.js, React, Firebase, Material UI</p></a>
+											  <p>Next.js, React, Firebase, Material UI</p> 
 											  
 											 
 
@@ -216,9 +308,9 @@
 											  <div class="project-icons">
     											<a href="#" onclick="openModal('assets/css/images/expenseBig.png'); return false;" class="overlay-btn">🔍</a>
     											<a href="https://expense-tracker-sheet.vercel.app/" target="_blank" class="overlay-btn">🚀</a>
-												<a href="https://github.com/JeffDing27/expense-tracker.git" target="_blank" style="text-decoration: none; color: inherit;" class="github-link"><i class="fab fa-github"></i></a>
+												<a href="https://github.com/JeffDing27/expense-tracker.git" target="_blank" style="text-decoration: none; color: inherit;" class="overlay-btn github-link"><i class="fab fa-github"></i></a>
 											</div>
-											  <p>Next.js, React, Firebase, Tailwind CSS</p></a>
+											  <p>Next.js, React, Firebase, Tailwind CSS</p>
 											 
 											  
 
@@ -236,10 +328,10 @@
 
 											  <div class="project-icons">
     											<a href="#" onclick="openModal('assets/css/images/magazineBig.png'); return false;" class="overlay-btn">🔍</a>
-    											<a href="https://github.com/JeffDing27/magazine-app.git" target="_blank" style="text-decoration: none; color: inherit;" class="github-link"><i class="fab fa-github"></i></a>
+    											<a href="https://github.com/JeffDing27/magazine-app.git" target="_blank" style="text-decoration: none; color: inherit;" class="overlay-btn github-link"><i class="fab fa-github"></i></a>
 
 											</div>
-											  <p>React, JavaScript, Style-components CSS</p></a>
+											  <p>React, JavaScript, Style-components CSS</p>
 											 
 											  
 											</div>
@@ -303,7 +395,7 @@
 								<section>
 									
 								
-							</div>
+							
 							
 						</div>
 					</section>
@@ -372,6 +464,8 @@
     <li>Design: HTML5 UP</li>
   </ul>
 </footer>
+
+
 
 
 

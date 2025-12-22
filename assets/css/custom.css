@@ -1,14 +1,121 @@
-html, body {
+html,
+body {
   background-color: #ffffff;
 }
-.about-interest-mg
-{
-    margin-top: 2rem;
-    
+/* ---------- Navbar ---------- */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+#mobile-links {
+  display: none;
+}
+
+/* ---------- Banner ----------*/
+#intro {
+  text-align: left !important;
+}
+/* Force intro-container to be flex with left content + right image */
+.intro-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* text on left, image on right */
+  gap: 120px; /* space between text and image */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: left;
+}
+
+/* Left column content */
+.intro-text {
+  text-align: left !important; /* left align text */
+  /* optional: limit width */
+}
+
+/* Right image */
+.intro-image {
+  margin-left: auto; /* pushes image to right if container has extra space */
+}
+.intro-image img {
+  width: 320px;
+  height: auto;
+  display: block;
+  border-radius: 20px; /* optional soft edges */
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .intro-image img {
+    width: 220px;
+  }
+}
+
+.intro-text h1,
+.intro-text p,
+.intro-text ul.actions,
+.intro-text ul.actions li {
+  justify-content: inherit !important;
+  padding: 0 !important;
+  gap: 20px !important;
+}
+#intro p {
+  color: #808080 !important;
+}
+
+/* Image styling */
+.intro-image img {
+  width: 320px !important; /* adjust size */
+  height: 466px !important;
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
+  /* soft fade to blend with background */
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 52%,
+    rgba(0, 0, 0, 0) 75%
+  ) !important;
+
+  opacity: 1.9; /* slight transparency */
+}
+
+.about-interest-mg {
+  margin-top: 2rem;
+}
+.resume-list {
+  list-style: none !important; /* remove bullet */
+  padding: 0 !important; /* remove default padding */
+  margin: 0 0 1.5rem 0 !important; /* spacing below */
+}
+
+.resume-list li {
+  margin: 0 !important;
 }
 .resume-btn {
-  background-color: #000;
-  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
   border: 2px solid #000;
   padding: 0.6em 1.2em;
   text-decoration: none;
@@ -17,128 +124,146 @@ html, body {
   display: inline-block;
   transition: all 0.3s ease;
   font-size: 0.85rem;
+  border: 3px solid transparent; /* needed for sizing */
+  /* gradient border trick */
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.3s ease;
 }
 
 .resume-btn:hover {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
+  background-image: linear-gradient(black, black),
+    linear-gradient(to right, #3b82f6, #a855f7, #ec4899) !important;
+
+  color: white !important;
+  box-shadow: 0 0 15px 3px rgba(235, 59, 90, 0.7),
+    0 0 25px 5px rgba(59, 130, 246, 0.5);
+}
+.resume-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+.resume-btn:hover::after {
+  left: 125%;
+  transition: all 0.7s ease;
 }
 
 .icon.major {
-   width: 2.5rem !important;
+  width: 2.5rem !important;
   height: 2.5rem !important;
   line-height: 2.5rem !important;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.icon.major img{
-    width: 100%;
+.icon.major img {
+  width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 /* Project */
 .project-card {
-    width: 100%;
-    max-width: 400px; /* or whatever size your layout uses */
-    margin: 0 auto;
+  width: 100%;
+  max-width: 400px; /* or whatever size your layout uses */
+  margin: 0 auto;
 }
 
 /* Only wrap the image */
 .image-container {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    z-index: 1;
-    position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+  position: relative;
 }
 
 .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
 }
 
 /* Hover ONLY affects the image overlay */
 .image-container:hover .project-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .overlay-btn {
-    background: white;
-    color: black;
-    font-size: 1.6rem;
-    padding: 0;
-    line-height: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: transform 0.2s;
-    pointer-events: auto;
+  color: black;
+  font-size: 1.6rem;
+  padding: 0;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none !important;
+  text-decoration: none;
+  transition: transform 0.2s;
+  pointer-events: auto;
 }
 
-
-
-
 .overlay-btn:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .project-icons {
-  display: flex;          /* makes them horizontal */
-  gap: 10px;              /* spacing between icons */
+  display: flex; /* makes them horizontal */
+  gap: 10px; /* spacing between icons */
   margin: 10px 0;
-  justify-content:center;
+  justify-content: center;
 }
 
 .icon-btn {
-  font-size: 1.5rem;      /* adjust icon size */
-  text-decoration: none;  
+  font-size: 1.5rem; /* adjust icon size */
+  text-decoration: none;
   cursor: pointer;
-  
 }
-a{
+a {
   align-content: center !important;
-} 
+}
 .github-link {
-  color: inherit;              /* keep original text color */
-  text-decoration: none;       /* remove underline */
-  display: inline-block;       /* needed for transform */
+  color: inherit; /* keep original text color */
+  text-decoration: none; /* remove underline */
+  display: inline-block; /* needed for transform */
   transition: transform 0.2s, color 0.2s; /* smooth movement and color change */
 }
 
 .github-link:hover {
-  transform: scale(1.2);       /* make it 20% bigger on hover */
-  
+  transform: scale(1.2); /* make it 20% bigger on hover */
 }
-
 
 /* Form fields styling */
 .split.style1 form input,
 .split.style1 form textarea {
-  background-color: #fff;   /* white background */
-  color: #000 !important;              /* black text */
-  border: 2px solid #000;   /* black border */
+  background-color: #fff; /* white background */
+  color: #000 !important; /* black text */
+  border: 2px solid #000; /* black border */
   padding: 0.5em;
   border-radius: 4px;
 }
@@ -151,18 +276,18 @@ a{
 
 /* Submit button styling */
 .split.style1 form button.submit {
-  background-color: #fff;  /* white background */
-  color: #000;             /* black text */
-  border: 2px solid #000;  /* black border */
-  border-radius: 4px;
+  background-color: #fff; /* white background */
+  color: #000; /* black text */
+  border: 2px solid #000; /* black border */
+
   cursor: pointer;
   transition: all 0.3s ease; /* smooth hover effect */
 }
 
 /* Hover effect: reverse colors */
 .split.style1 form button.submit:hover {
-  background-color: #000;  /* black background */
-  color: #fff;             /* white text */
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
 }
 .footer-contact {
   display: flex;
@@ -178,7 +303,8 @@ a{
   flex: 1; /* each item takes equal space */
   min-width: 150px; /* ensures it doesn’t get too small on mobile */
   display: flex;
-    justify-content: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-contact .footer-item h3 {
@@ -202,7 +328,7 @@ a{
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
 }
@@ -223,27 +349,142 @@ a{
   z-index: 100000;
 }
 
-
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .about-row {
-        flex-direction: column;
-    }
+  .desktop-nav {
+    display: none;
+  }
+  /* Hamburger icon */
+  .menu-toggle {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.8rem;
+    z-index: 1000000;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-toggle:hover {
+    background: none;
+  }
+  .menu-toggle.active {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+    transform: none;
+  }
 
-    .about-column1,
-    .about-column2 {
-       margin-left: 0 !important;
-    }
-    .footer-contact {
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu{
-        flex-direction: column;
-        text-align: center;
-    }
-    #intro::before {
-      position: inherit !important;
-    }
+  /* Change icon to X when active */
+  .menu-toggle.active i::before {
+    content: "\f00d"; /* Font Awesome X */
+  }
+
+  /* Default menu hidden */
+  #mobile-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    padding-top: 5rem;
+    gap: 2rem;
+    z-index: 100000; /* below hamburger */
+    list-style: none;
+    margin: 0;
+  }
+
+  /* When menu opens */
+  #mobile-links.show {
+    display: flex;
+  }
+
+  /* Menu links */
+  #mobile-links li a {
+    font-size: 1.3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+
+  .intro-flex,
+  .intro-image {
+    flex-direction: column-reverse; /* text below, image on top */
+    align-items: center; /* center horizontally */
+    text-align: center; /* center text */
+    margin-left: 0; /* reset left margin */
+    gap: 0 !important;
+    margin: 0 !important;
+    padding-bottom: 3rem;
+  }
+  .intro-image img {
+    margin-top: 0 !important;
+    width: 226px !important;
+    height: 325px !important;
+  }
+  #dynamic-text {
+    font-size: 1.5rem !important;
+  }
+  .banner-button::after {
+    width: 200%; /* wider for long mobile buttons */
+    left: -100%;
+  }
+
+  .about-row {
+    flex-direction: column;
+  }
+
+  .about-column1,
+  .about-column2 {
+    margin-left: 0 !important;
+  }
+  .footer-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+  #intro::before {
+    position: inherit !important;
+  }
 }
-
+@media (max-width: 1024px) and (min-width: 769px) {
+  .intro-flex,
+  .intro-image {
+    flex-direction: column-reverse; /* text below, image on top */
+    align-items: center; /* center horizontally */
+    text-align: center; /* center text */
+    margin-left: 0; /* reset left margin */
+    gap: 0 !important;
+    margin: 0 !important;
+  }
+  .intro-image img {
+    margin: 5rem !important;
+    padding: 10px !important;
+    width: 214px !important;
+  }
+  .intro-text h1 {
+    font-size: 2.75rem !important;
+  }
+  #dynamic-text {
+    font-size: 1.5rem !important;
+  }
+  .intro-text p {
+    font-size: 1rem !important;
+  }
+}

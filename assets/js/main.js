@@ -4,230 +4,228 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
+  var $window = $(window),
+    $body = $("body"),
+    $sidebar = $("#sidebar");
 
-	var	$window = $(window),
-		$body = $('body'),
-		$sidebar = $('#sidebar');
+  // Breakpoints.
+  breakpoints({
+    xlarge: ["1281px", "1680px"],
+    large: ["981px", "1280px"],
+    medium: ["737px", "980px"],
+    small: ["481px", "736px"],
+    xsmall: [null, "480px"],
+  });
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ]
-		});
+  // Hack: Enable IE flexbox workarounds.
+  if (browser.name == "ie") $body.addClass("is-ie");
 
-	// Hack: Enable IE flexbox workarounds.
-		if (browser.name == 'ie')
-			$body.addClass('is-ie');
+  // Play initial animations on page load.
+  $window.on("load", function () {
+    window.setTimeout(function () {
+      $body.removeClass("is-preload");
+    }, 100);
+  });
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Forms.
 
-	// Forms.
+  // Hack: Activate non-input submits.
+  $("form").on("click", ".submit", function (event) {
+    // Stop propagation, default.
+    event.stopPropagation();
+    event.preventDefault();
 
-		// Hack: Activate non-input submits.
-			$('form').on('click', '.submit', function(event) {
+    // Submit form.
+    $(this).parents("form").submit();
+  });
 
-				// Stop propagation, default.
-					event.stopPropagation();
-					event.preventDefault();
+  // Sidebar.
+  if ($sidebar.length > 0) {
+    var $sidebar_a = $sidebar.find("a");
 
-				// Submit form.
-					$(this).parents('form').submit();
+    $sidebar_a.addClass("scrolly").on("click", function () {
+      var $this = $(this);
 
-			});
+      // External link? Bail.
+      if ($this.attr("href").charAt(0) != "#") return;
 
-	// Sidebar.
-		if ($sidebar.length > 0) {
+      // Deactivate all links.
+      $sidebar_a.removeClass("active");
 
-			var $sidebar_a = $sidebar.find('a');
+      // Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+      $this.addClass("active").addClass("active-locked");
+    });
+    $sidebar_a.each(function () {
+      var $this = $(this),
+        id = $this.attr("href"),
+        $section = $(id);
 
-			$sidebar_a
-				.addClass('scrolly')
-				.on('click', function() {
+      // No section for this link? Bail.
+      if ($section.length < 1) return;
 
-					var $this = $(this);
+      // Scrollex.
+      $section.scrollex({
+        mode: "middle",
+        top: "-1vh",
+        bottom: "-1vh",
+        initialize: function () {
+          // Deactivate section.
+          $section.addClass("inactive");
+        },
+        enter: function () {
+          // Activate section.
+          $section.removeClass("inactive");
 
-					// External link? Bail.
-						if ($this.attr('href').charAt(0) != '#')
-							return;
+          // No locked links? Deactivate all links and activate this section's one.
+          if ($sidebar_a.filter(".active-locked").length == 0) {
+            $sidebar_a.removeClass("active");
+            $this.addClass("active");
+          }
 
-					// Deactivate all links.
-						$sidebar_a.removeClass('active');
+          // Otherwise, if this section's link is the one that's locked, unlock it.
+          else if ($this.hasClass("active-locked"))
+            $this.removeClass("active-locked");
+        },
+      });
+    });
+  }
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
+  // Scrolly.
+  $(".scrolly").scrolly({
+    speed: 1000,
+    offset: function () {
+      // If <=large, >small, and sidebar is present, use its height as the offset.
+      if (
+        breakpoints.active("<=large") &&
+        !breakpoints.active("<=small") &&
+        $sidebar.length > 0
+      )
+        return $sidebar.height();
 
-				})
-				$sidebar_a.each(function() {
+      return 0;
+    },
+  });
 
-					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
+  // Name and description.
+  document.addEventListener("DOMContentLoaded", function () {
+    const dynamicText = document.getElementById("dynamic-text");
+    const phrases = [
+      "Ru-Hsuan Ding(Jeff)",
+      "a Web Developer",
+      "a Software Engineer",
+      "an AI Enthusiast",
+    ];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+    const typingSpeed = 100;
+    const deletingSpeed = 60;
+    const pauseTime = 1000; //Time before deleting
 
-					// No section for this link? Bail.
-						if ($section.length < 1)
-							return;
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
 
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '-1vh',
-							bottom: '-1vh',
-							initialize: function() {
+      if (isDeleting) {
+        currentText = phrases[phraseIndex].substring(0, letterIndex - 1);
+        letterIndex--;
+      } else {
+        currentText = phrases[phraseIndex].substring(0, letterIndex + 1);
+        letterIndex++;
+      }
+      dynamicText.textContent = currentText;
 
-								// Deactivate section.
-									$section.addClass('inactive');
+      let delay = isDeleting ? deletingSpeed : typingSpeed;
 
-							},
-							enter: function() {
+      if (!isDeleting && letterIndex === currentPhrase.length) {
+        isDeleting = true;
+        delay = pauseTime;
+      } else if (isDeleting && letterIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length; //Cycle through phrases
+        delay = typingSpeed;
+      }
+      setTimeout(type, delay);
+    }
+    type(); // start the typing effect
+  });
 
-								// Activate section.
-									$section.removeClass('inactive');
+  // Spotlights.
+  $(".spotlights > section")
+    .scrollex({
+      mode: "middle",
+      top: "-10vh",
+      bottom: "-10vh",
+      initialize: function () {
+        // Deactivate section.
+        $(this).addClass("inactive");
+      },
+      enter: function () {
+        // Activate section.
+        $(this).removeClass("inactive");
+      },
+    })
+    .each(function () {
+      var $this = $(this),
+        $image = $this.find(".image"),
+        $img = $image.find("img"),
+        x;
 
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($sidebar_a.filter('.active-locked').length == 0) {
+      // Assign image.
+      $image.css("background-image", "url(" + $img.attr("src") + ")");
 
-										$sidebar_a.removeClass('active');
-										$this.addClass('active');
+      // Set background position.
+      if ((x = $img.data("position"))) $image.css("background-position", x);
 
-									}
+      // Hide <img>.
+      $img.hide();
+    });
 
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
+  // Features.
+  $(".features").scrollex({
+    mode: "middle",
+    top: "-20vh",
+    bottom: "-20vh",
+    initialize: function () {
+      // Deactivate section.
+      $(this).addClass("inactive");
+    },
+    enter: function () {
+      // Activate section.
+      $(this).removeClass("inactive");
+    },
+  });
 
-							}
-						});
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const mobileLinks = document.getElementById("mobile-links");
+    const icon = toggle.querySelector("i");
 
-				});
-				
+    toggle.addEventListener("click", () => {
+      mobileLinks.classList.toggle("show");
 
-		}
+      // Toggle positioning for X
+      toggle.classList.toggle("active");
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() {
-
-				// If <=large, >small, and sidebar is present, use its height as the offset.
-					if (breakpoints.active('<=large')
-					&&	!breakpoints.active('<=small')
-					&&	$sidebar.length > 0)
-						return $sidebar.height();
-
-				return 0;
-
-			}
-		});
-
-		// Name and description.
-		document.addEventListener("DOMContentLoaded", function(){
-           const dynamicText = document.getElementById("dynamic-text");
-		   const phrases = ["Junior Web Developer", "Software Engineer", "AI Enthusiast"];
-		   let phraseIndex =0;
-		   let letterIndex =0;
-		   let currentText = "";
-		   let isDeleting = false;
-		   const typingSpeed =100;
-		   const deletingSpeed = 60;
-		   const pauseTime =1000; //Time before deleting
-
-		   function type(){
-
-			const currentPhrase =phrases[phraseIndex];
-
-			if (isDeleting){
-               currentText = phrases[phraseIndex].substring(0, letterIndex -1);
-			   letterIndex--;
-			} else{
-				currentText = phrases[phraseIndex].substring(0, letterIndex +1);
-				letterIndex++;
-			}
-			dynamicText.textContent = currentText;
-
-			let delay = isDeleting ? deletingSpeed : typingSpeed;
-
-			if (!isDeleting && letterIndex === currentPhrase.length){
-				
-					isDeleting = true;
-					delay= pauseTime;
-				
-			} else if (isDeleting && letterIndex === 0){
-				isDeleting = false;
-				phraseIndex = (phraseIndex +1) % phrases.length; //Cycle through phrases
-				delay = typingSpeed;
-			}
-			setTimeout(type, delay);
-		   }
-		   type(); // start the typing effect
-		})
-
-	// Spotlights.
-		$('.spotlights > section')
-			.scrollex({
-				mode: 'middle',
-				top: '-10vh',
-				bottom: '-10vh',
-				initialize: function() {
-
-					// Deactivate section.
-						$(this).addClass('inactive');
-
-				},
-				enter: function() {
-
-					// Activate section.
-						$(this).removeClass('inactive');
-
-				}
-			})
-			.each(function() {
-
-				var	$this = $(this),
-					$image = $this.find('.image'),
-					$img = $image.find('img'),
-					x;
-
-				// Assign image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
-
-				// Set background position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
-
-				// Hide <img>.
-					$img.hide();
-
-			});
-
-	// Features.
-		$('.features')
-			.scrollex({
-				mode: 'middle',
-				top: '-20vh',
-				bottom: '-20vh',
-				initialize: function() {
-
-					// Deactivate section.
-						$(this).addClass('inactive');
-
-				},
-				enter: function() {
-
-					// Activate section.
-						$(this).removeClass('inactive');
-
-				}
-			});
-
+      // Swap hamburger / X icon
+      if (mobileLinks.classList.contains("show")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+    // Close menu when a link is clicked
+    const links = mobileLinks.querySelectorAll("a"); // all links inside menu
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileLinks.classList.remove("show"); // hide menu
+        toggle.classList.remove("active"); // reset toggle button
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      });
+    });
+  });
 })(jQuery);
