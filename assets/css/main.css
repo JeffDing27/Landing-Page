@@ -4239,7 +4239,10 @@ li strong {
     grid-template-columns: repeat(2, 1fr); /* 2 logos per row */
     gap: 1rem;
   }
+  #two .inner > h2 {
+    font-size: 1.7rem !important;
+  }
   #two .inner > p {
-    padding-left: 1rem !important;
+    padding: 1.35rem !important;
   }
 }
