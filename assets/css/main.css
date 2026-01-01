@@ -4193,6 +4193,10 @@ li strong {
   display: block;
   margin-bottom: 0.5em;
 }
+/* Get In Touch Section */
+#five .inner > h2 {
+  margin: 0 !important;
+}
 
 @media screen and (max-width: 1000px) {
   .about-container {
@@ -4234,5 +4238,8 @@ li strong {
   .skill-set {
     grid-template-columns: repeat(2, 1fr); /* 2 logos per row */
     gap: 1rem;
+  }
+  #two .inner > p {
+    padding-left: 1rem !important;
   }
 }
