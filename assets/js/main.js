@@ -112,8 +112,8 @@
     const dynamicText = document.getElementById("dynamic-text");
     const phrases = [
       "Ru-Hsuan Ding(Jeff)",
-      "a Web Developer",
-      "a Software Engineer",
+      "a Junior Web Developer",
+      "an Aspiring Software Engineer",
       "an AI Enthusiast",
     ];
     let phraseIndex = 0;
