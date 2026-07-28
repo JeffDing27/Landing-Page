@@ -2,7 +2,9 @@ html,
 body {
   background-color: #ffffff;
 }
-/* ---------- Navbar ---------- */
+/* ==============================
+   Navbar SECTION
+============================== */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -13,7 +15,9 @@ body {
   display: none;
 }
 
-/* ---------- Banner ----------*/
+/* ==============================
+   BANNER SECTION
+============================== */
 #intro {
   text-align: left !important;
 }
@@ -45,6 +49,40 @@ body {
   height: auto;
   display: block;
   border-radius: 20px; /* optional soft edges */
+}
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about-container {
+  display: flex;
+}
+.content {
+  width: 80vw;
+}
+.image {
+  width: auto !important;
+  height: 40vh;
+  object-fit: contain;
+  object-position: center;
+}
+.about-text {
+  text-align: left;
+}
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+.resume-about {
+  color: blue !important;
+}
+.about-column2 {
+  margin-left: 10rem;
+}
+li strong {
+  color: white !important;
 }
 
 /* Responsive: stack on small screens */
@@ -126,7 +164,8 @@ body {
   font-size: 0.85rem;
   border: 3px solid transparent; /* needed for sizing */
   /* gradient border trick */
-  background-image: linear-gradient(white, white),
+  background-image:
+    linear-gradient(white, white),
     linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -134,11 +173,13 @@ body {
 }
 
 .resume-btn:hover {
-  background-image: linear-gradient(black, black),
+  background-image:
+    linear-gradient(black, black),
     linear-gradient(to right, #3b82f6, #a855f7, #ec4899) !important;
 
   color: white !important;
-  box-shadow: 0 0 15px 3px rgba(235, 59, 90, 0.7),
+  box-shadow:
+    0 0 15px 3px rgba(235, 59, 90, 0.7),
     0 0 25px 5px rgba(59, 130, 246, 0.5);
 }
 .resume-btn::after {
@@ -170,7 +211,128 @@ body {
   display: block;
   object-fit: cover;
 }
-/* Project */
+
+/* =====================================
+   SPIRITUAL GROWTH CARD
+===================================== */
+
+.spiritual-growth-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.spiritual-growth-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #5f7cff, #ff4fc3);
+}
+
+.spiritual-growth-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.spiritual-growth-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+.spiritual-growth-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid #ff4fc3;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.spiritual-growth-btn:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 79, 195, 0.12);
+}
+
+@media screen and (max-width: 736px) {
+  .spiritual-growth-card {
+    flex-direction: column;
+  }
+}
+
+/* =====================================
+   SKILLS SECTION
+===================================== */
+
+.skill-set {
+  display: inline-grid;
+  gap: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(6, 1fr);
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.skill span {
+  filter: brightness(0.5); /* darken by default */
+  transition:
+    filter 0.3s ease,
+    color 0.3s ease; /* smooth effect */
+}
+
+.skill img,
+.skill i {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  /* 🔥 THIS fixes size differences */
+  font-size: 4rem;
+  opacity: 0.85;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  filter: brightness(1);
+}
+.skill:hover img,
+.skill:hover span {
+  opacity: 1;
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+/* =====================================
+   PROJECTS SECTION
+===================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 5rem;
+  justify-items: center;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.5em;
+}
 .project-card {
   width: 100%;
   max-width: 400px; /* or whatever size your layout uses */
@@ -251,12 +413,18 @@ a {
   color: inherit; /* keep original text color */
   text-decoration: none; /* remove underline */
   display: inline-block; /* needed for transform */
-  transition: transform 0.2s, color 0.2s; /* smooth movement and color change */
+  transition:
+    transform 0.2s,
+    color 0.2s; /* smooth movement and color change */
 }
 
 .github-link:hover {
   transform: scale(1.2); /* make it 20% bigger on hover */
 }
+
+/* ==============================
+   GET IN TOUCH SECTION
+============================== */
 
 /* Form fields styling */
 .split.style1 form input,
@@ -289,6 +457,58 @@ a {
   background-color: #000; /* black background */
   color: #fff; /* white text */
 }
+/* ===============================================
+   Additional Rescources - Spiritual-growth Page
+================================================== */
+/* Additional Resources */
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.8rem;
+  border-left: 4px solid #ff5cb8;
+  transition: 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.resource-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.resource-title {
+  color: #caa8ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.references-box {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.references-box ul {
+  margin-bottom: 0;
+}
+
+.references-box li {
+  margin-bottom: 0.75rem;
+}
+/* ==============================
+  FOOTER SECTION
+============================== */
+
 .footer-contact {
   display: flex;
   justify-content: space-between; /* left, center, right */
@@ -347,6 +567,398 @@ a {
   color: white;
   cursor: pointer;
   z-index: 100000;
+}
+
+/* =========================================
+   SPIRITUAL GROWTH PAGE
+========================================= */
+
+.spiritual-page {
+  background-color: #050505;
+}
+
+/* Hero */
+
+.spiritual-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.spiritual-hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.28),
+    rgba(168, 85, 247, 0)
+  );
+  pointer-events: none;
+}
+
+.spiritual-hero::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  bottom: -100px;
+  left: -80px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.22),
+    rgba(59, 130, 246, 0)
+  );
+  pointer-events: none;
+}
+
+.spiritual-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 950px;
+}
+
+.spiritual-hero h1 {
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.05;
+}
+
+.spiritual-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+}
+
+.spiritual-label i {
+  color: #ec4899;
+}
+
+.spiritual-hero-description {
+  max-width: 850px;
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+.spiritual-secondary-btn {
+  background: transparent !important;
+}
+
+.scroll-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.scroll-message i {
+  animation: spiritualBounce 1.8s infinite;
+}
+
+@keyframes spiritualBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* Section headings */
+
+.spiritual-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.spiritual-section-heading h2 {
+  margin-bottom: 0.5rem;
+}
+
+.spiritual-section-heading p {
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.spiritual-section-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 55px;
+  height: 55px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  color: #ec4899;
+  font-weight: 700;
+}
+
+/* Guiding principles */
+
+.spiritual-principles-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.principle-card {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(236, 72, 153, 0.55);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+.principle-number {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.principle-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #3b82f6, #a855f7, #ec4899);
+  font-size: 1.45rem;
+}
+
+.principle-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.principle-card > p {
+  line-height: 1.8;
+}
+
+.principle-scripture {
+  margin: 2rem 0 0;
+  padding: 1.25rem;
+  border-left: 3px solid #ec4899;
+  border-radius: 0 10px 10px 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.principle-scripture p {
+  margin-bottom: 0.75rem;
+  color: white;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.principle-scripture cite {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  font-style: normal;
+}
+
+.principle-card h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Personal journey */
+
+.spiritual-journey-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.journey-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.journey-story {
+  padding: 2rem;
+  border-left: 3px solid #a855f7;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.journey-story p {
+  line-height: 1.9;
+}
+
+.journey-story p:last-child {
+  margin-bottom: 0;
+}
+
+.journey-takeaway {
+  position: sticky;
+  top: 2rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.journey-takeaway i {
+  margin-bottom: 1.25rem;
+  color: #ec4899;
+  font-size: 2rem;
+}
+
+.journey-takeaway h3 {
+  margin-bottom: 1rem;
+}
+
+.journey-takeaway p {
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+/* Final reflection */
+
+.spiritual-reflection-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.reflection-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reflection-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #a855f7, #ec4899);
+  font-size: 1.8rem;
+}
+
+.reflection-card p {
+  line-height: 1.9;
+}
+
+.reflection-card p:last-child {
+  margin-bottom: 0;
+}
+
+.spiritual-closing {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.spiritual-closing p {
+  margin-bottom: 2rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+/* =========================================
+   SPIRITUAL GROWTH RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 1100px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-card {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .spiritual-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .spiritual-hero-description {
+    font-size: 1.1rem;
+  }
+
+  .spiritual-section-heading {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .principle-card {
+    padding: 1.5rem;
+  }
+
+  .journey-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-takeaway {
+    position: static;
+  }
+
+  .reflection-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .reflection-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .spiritual-closing p {
+    font-size: 1.1rem;
+  }
 }
 
 /* Media query for smaller screens */
@@ -451,6 +1063,7 @@ a {
   .about-column2 {
     margin-left: 0 !important;
   }
+
   .footer-contact {
     flex-direction: column;
     align-items: center;

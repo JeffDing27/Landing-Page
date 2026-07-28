@@ -244,10 +244,18 @@ textarea {
 }
 
 a {
-  -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  -moz-transition:
+    color 0.2s ease,
+    border-bottom-color 0.2s ease;
+  -webkit-transition:
+    color 0.2s ease,
+    border-bottom-color 0.2s ease;
+  -ms-transition:
+    color 0.2s ease,
+    border-bottom-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-bottom-color 0.2s ease;
   border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
   color: inherit;
   text-decoration: none;
@@ -1979,18 +1987,21 @@ button,
   border: 3px solid transparent; /* needed for sizing */
 
   /* gradient border trick */
-  background-image: linear-gradient(white, white),
+  background-image:
+    linear-gradient(white, white),
     linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   transition: all 0.3s ease;
 }
 .banner-button:hover {
-  background-image: linear-gradient(black, black),
+  background-image:
+    linear-gradient(black, black),
     linear-gradient(to right, #3b82f6, #a855f7, #ec4899) !important;
 
   color: white !important;
-  box-shadow: 0 0 15px 3px rgba(235, 59, 90, 0.7),
+  box-shadow:
+    0 0 15px 3px rgba(235, 59, 90, 0.7),
     0 0 25px 5px rgba(59, 130, 246, 0.5);
 }
 
@@ -2021,10 +2032,18 @@ button:after,
   -ms-transform: scale(0.25);
   transform: scale(0.25);
   pointer-events: none;
-  -moz-transition: opacity 0.2s ease, -moz-transform 0.2s ease;
-  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
-  -ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  -moz-transition:
+    opacity 0.2s ease,
+    -moz-transform 0.2s ease;
+  -webkit-transition:
+    opacity 0.2s ease,
+    -webkit-transform 0.2s ease;
+  -ms-transition:
+    opacity 0.2s ease,
+    -ms-transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   background: #fff;
   border-radius: 3em;
   content: "";
@@ -2168,10 +2187,18 @@ button:hover:active:after,
 }
 
 .features section .icon {
-  -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  -moz-transition:
+    opacity 0.5s ease,
+    -moz-transform 0.5s ease;
+  -webkit-transition:
+    opacity 0.5s ease,
+    -webkit-transform 0.5s ease;
+  -ms-transition:
+    opacity 0.5s ease,
+    -ms-transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   -moz-transition-delay: 1s;
   -webkit-transition-delay: 1s;
   -ms-transition-delay: 1s;
@@ -3214,10 +3241,18 @@ body.is-ie .spotlights > section {
   -webkit-transform: translateX(0) translateY(0);
   -ms-transform: translateX(0) translateY(0);
   transform: translateX(0) translateY(0);
-  -moz-transition: opacity 1s ease, -moz-transform 1s ease;
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  -ms-transition: opacity 1s ease, -ms-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
+  -moz-transition:
+    opacity 1s ease,
+    -moz-transform 1s ease;
+  -webkit-transition:
+    opacity 1s ease,
+    -webkit-transform 1s ease;
+  -ms-transition:
+    opacity 1s ease,
+    -ms-transform 1s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
   opacity: 1;
 }
 
@@ -3453,10 +3488,18 @@ body.is-ie .wrapper.fullscreen {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -moz-transition: opacity 1s ease, -moz-transform 1s ease;
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  -ms-transition: opacity 1s ease, -ms-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
+  -moz-transition:
+    opacity 1s ease,
+    -moz-transform 1s ease;
+  -webkit-transition:
+    opacity 1s ease,
+    -webkit-transform 1s ease;
+  -ms-transition:
+    opacity 1s ease,
+    -ms-transform 1s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
   opacity: 1;
   /*text-align: center;*/
 }
@@ -3475,10 +3518,18 @@ body.is-preload .wrapper.fade-up > .inner {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -moz-transition: opacity 1s ease, -moz-transform 1s ease;
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  -ms-transition: opacity 1s ease, -ms-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
+  -moz-transition:
+    opacity 1s ease,
+    -moz-transform 1s ease;
+  -webkit-transition:
+    opacity 1s ease,
+    -webkit-transform 1s ease;
+  -ms-transition:
+    opacity 1s ease,
+    -ms-transform 1s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
   opacity: 1;
 }
 
@@ -3710,10 +3761,18 @@ body.is-ie #sidebar > .inner {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -moz-transition: opacity 0.15s ease, -moz-transform 0.75s ease;
-  -webkit-transition: opacity 0.15s ease, -webkit-transform 0.75s ease;
-  -ms-transition: opacity 0.15s ease, -ms-transform 0.75s ease;
-  transition: opacity 0.15s ease, transform 0.75s ease;
+  -moz-transition:
+    opacity 0.15s ease,
+    -moz-transform 0.75s ease;
+  -webkit-transition:
+    opacity 0.15s ease,
+    -webkit-transform 0.75s ease;
+  -ms-transition:
+    opacity 0.15s ease,
+    -ms-transform 0.75s ease;
+  transition:
+    opacity 0.15s ease,
+    transform 0.75s ease;
   margin: 1em 0 1em 0;
   opacity: 1;
   padding: 0;
@@ -3913,7 +3972,9 @@ body.is-ie #sidebar > .inner {
   display: inline-block;
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
   color: white;
 }
 #sidebar nav ul li a:hover .text {
@@ -4105,94 +4166,6 @@ body.is-preload #sidebar nav ul li {
   }
 }
 
-/* About Section */
-.about-container {
-  display: flex;
-}
-.content {
-  width: 80vw;
-}
-.image {
-  width: auto !important;
-  height: 40vh;
-  object-fit: contain;
-  object-position: center;
-}
-.about-text {
-  text-align: left;
-}
-.about-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-}
-.resume-about {
-  color: blue !important;
-}
-.about-column2 {
-  margin-left: 10rem;
-}
-li strong {
-  color: white !important;
-}
-/* Skills Section */
-
-.skill-set {
-  display: grid;
-  gap: 2rem;
-  justify-content: center;
-  grid-template-columns: repeat(6, 1fr);
-}
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-.skill span {
-  filter: brightness(0.5); /* darken by default */
-  transition: filter 0.3s ease, color 0.3s ease; /* smooth effect */
-}
-
-.skill img,
-.skill i {
-  width: 4rem;
-  height: 4rem;
-  object-fit: contain;
-  /* 🔥 THIS fixes size differences */
-  font-size: 4rem;
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  filter: brightness(0.7);
-}
-.skill:hover img,
-.skill:hover span {
-  opacity: 1;
-  transform: scale(1.08);
-  filter: brightness(1.2);
-}
-
-/* Projects Section */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 5rem;
-  justify-items: center;
-}
-.project-card {
-  width: 300px;
-  margin: 1em;
-  text-align: center;
-}
-.project-card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 0.5em;
-}
 /* Get In Touch Section */
 #five .inner > h2 {
   margin: 0 !important;
