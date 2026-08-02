@@ -598,6 +598,85 @@ li strong {
 }
 
 /* ==============================
+   Professional Experience SECTION
+============================== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+.experience-card {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 16px;
+
+  transition: 0.3s ease;
+}
+.experience-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(168, 85, 247, 0.7);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.experience-logo {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 2rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.experience-logo img {
+  width: 80px;
+
+  height: 80px;
+
+  object-fit: contain;
+}
+.experience-info {
+  padding: 1.5rem;
+}
+.experience-info h3 {
+  margin-bottom: 0.3rem;
+
+  color: #fff;
+
+  text-align: center;
+}
+.experience-info h4 {
+  margin-bottom: 1.2rem;
+
+  color: #a855f7;
+
+  text-align: center;
+
+  font-weight: 500;
+}
+@media (max-width: 1000px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==============================
    GET IN TOUCH SECTION
 ============================== */
 
