@@ -671,6 +671,13 @@ li strong {
 
   font-weight: 500;
 }
+.experience-date {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+  margin-bottom: 1.2rem;
+}
 @media (max-width: 1000px) {
   .experience-grid {
     grid-template-columns: repeat(2, 1fr);

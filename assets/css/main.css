@@ -3712,7 +3712,7 @@ body.is-preload .wrapper.fade > .inner {
   text-align: center;
 
   z-index: 10000;
-  background-color: rgba(51, 51, 51, 0.3);
+  background-color: #1a1a1a;
   /*backdrop-filter: blur(5px);*/
 }
 
